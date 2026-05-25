@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio website</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+
+</head>
+<body>
+    <nav>
+        <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="nav-cta">Contact</a></li>
+        </ul>
+
+        <span class="nav-name">Rabiya Anwer</span>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+    </div>
+
+  <section class="hero" id="about">
+
+    <div class="hero-text">
+      <h4>FRONT-END DEVELOPER</h4>
+
+      <h1>Hey!I'm Rabiya Anwer.</h1>
+
+      <p>
+        Hi, I’m Rabiya — a passionate frontend developer focused on building modern, responsive, and user-friendly websites using HTML, CSS, and JavaScript.
+I enjoy turning creative ideas into real web experiences and improving my skills through projects and continuous learning.
+      </p>
+
+      <div class="hero-buttons">
+        <button class="btn btn-primary">PROJECTS</button>
+        <button class="btn btn-secondary">CONTACT ME</button>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="assets/portfolio-hero-girl.webp" alt="girl image">
+    </div>
+
+  </section>
+
+<section class="skills-section" id="skills">
+
+    <div class="center-circle">
+        <h1>MY<br>SKILLS</h1>
+    </div>
+
+    <!-- ORBIT 1 -->
+
+    <div class="orbit orbit1">
+
+        <div class="skill html">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+            <p>HTML</p>
+        </div>
+
+        <div class="skill css">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+            <p>CSS</p>
+        </div>
+
+        <div class="skill js">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+            <p>JS</p>
+        </div>
+
+        <div class="skill react">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg">
+            <p>REACT</p>
+        </div>
+
+    </div>
+
+    <!-- ORBIT 2 -->
+
+    <div class="orbit orbit2">
+
+        <div class="skill git">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg">
+            <p>GIT</p>
+        </div>
+
+        <div class="skill github">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg">
+            <p>GITHUB</p>
+        </div>
+
+        <div class="skill figma">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg">
+            <p>FIGMA</p>
+        </div>
+
+        <div class="skill vercel">
+            <img src="https://www.svgrepo.com/show/327408/logo-vercel.svg">
+            <p>VERCEL</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="projects-section" id="projects">
+    <h2 class="projects-title">MY <span>PROJECTS</span></h2>
+ 
+    <!-- PROJECT 1 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="assets/Screenshot 3.png" alt="Flavion Website">
+            <div class="project-overlay">
+                <a href="https://flavion-website-1ny4.vercel.app/" target="_blank" class="overlay-btn">Live ↗</a>
+            </div>
+        </div>
+        <div class="project-info">
+            <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+            </div>
+            <h3>Flavion Website</h3>
+            <p>Developed a responsive creative agency website featuring modern UI design, smooth scrolling animations, interactive sections, and mobile-friendly layouts. Focused on creating a clean and immersive user experience.</p>
+            <div class="project-links">
+                <a href="https://github.com/RabiyaAnwer839/Flavion-website" target="_blank" class="btn-ghost">GitHub ↗</a>
+                <a href="https://flavion-website-1ny4.vercel.app/" target="_blank" class="btn-filled">Live Demo ↗</a>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- PROJECT 2 -->
+    <div class="project-card reverse">
+        <div class="project-image">
+            <img src="assets/Screenshot 1.png" alt="Sidcup Family Golf">
+            <div class="project-overlay">
+                <a href="https://sidcup-family-golf-alpha.vercel.app/" target="_blank" class="overlay-btn">Live ↗</a>
+            </div>
+        </div>
+        <div class="project-info">
+            <div class="project-tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">GSAP</span>
+            </div>
+            <h3>Sidcup Family Golf</h3>
+            <p>Built a modern and interactive golf club landing page featuring smooth GSAP animations, custom cursor effects, scrolling interactions, and a fully responsive design. Focused on creating an engaging and immersive user experience with dynamic UI elements.</p>
+            <div class="project-links">
+                <a href="https://github.com/RabiyaAnwer839/sidcup-family-golf" target="_blank" class="btn-ghost">GitHub ↗</a>
+                <a href="https://sidcup-family-golf-alpha.vercel.app/" target="_blank" class="btn-filled">Live Demo ↗</a>
+            </div>
+        </div>
+    </div>
+ 
+    <!-- PROJECT 3 -->
+    <div class="project-card">
+        <div class="project-image">
+            <img src="assets/Screenshot2..png" alt="Cineify">
+            <div class="project-overlay">
+                <a href="https://cineify.vercel.app/" target="_blank" class="overlay-btn">Live ↗</a>
+            </div>
+        </div>
+        <div class="project-info">
+            <div class="project-tags">
+                <span class="tag react-tag">React</span>
+                <span class="tag">API</span>
+                <span class="tag">YouTube</span>
+            </div>
+            <h3>Cineify</h3>
+            <p>Built a modern movie discovery app using React with features like movie search, watchlist management, trailer previews via YouTube, and detailed movie information. Focused on creating a responsive and interactive cinematic experience with dynamic API integration.</p>
+            <div class="project-links">
+                <a href="https://github.com/RabiyaAnwer839/Cineify" target="_blank" class="btn-ghost">GitHub ↗</a>
+                <a href="https://cineify.vercel.app/" target="_blank" class="btn-filled">Live Demo ↗</a>
+            </div>
+        </div>
+    </div>
+ 
+</section>
+<section class="Contact" id="contact">
+  <h2>Let’s  <span>work together!</span></h2>
+
+  <div class="contact-container">
+
+    <!-- GitHub -->
+    <div class="contact-box">
+      <i class="fa-brands fa-github"></i>
+      <p>Check out my projects on</p>
+      
+      <a href="https://github.com/RabiyaAnwer839" target="_blank">RabiyaAnwer839</a>
+    </div>
+
+    <!-- Email -->
+    <div class="contact-box">
+      <i class="fa-regular fa-envelope"></i>
+      <p>Mail me on</p>
+       <a href="mailto:rabiyaanwer5@gmail.com">rabiyaanwer5@gmail.com</a>
+    </div>
+
+    <!-- Instagram -->
+    <div class="contact-box">
+      <i class="fa-brands fa-instagram"></i>
+      <p>Join my dev journey on</p>
+      <a href="https://www.instagram.com/rabbytes._/" target="_blank">@rabbytes._</a>
+    </div>
+  </div>
+</section>
+<footer class="footer">
+    <p>Made with ❤️ by <span>Rabiya Anwer</span></p>
+    <p class="footer-copy">© 2026 All Rights Reserved</p>
+</footer>
+    <script src="script.js"></script>
+</body>
+</html>
