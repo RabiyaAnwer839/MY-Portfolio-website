@@ -2,10 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
- body {
+ html,
+body {
+    width: 100%;
     overflow-x: hidden;
-width: 100%;
 }
 :root {
     --bg: #080c14;
@@ -80,7 +82,9 @@ nav {
 .nav-name {
     display: none;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 /* Hamburger — hidden on desktop */
 .hamburger {
     display: none;
@@ -105,11 +109,11 @@ nav {
     display: none;
     position: fixed;
     top: 68px;
-    left: 0; right: 0;
+    left: 0; 
     background: var(--indigo);
     flex-direction: column;
     align-items: center;
-    padding: 24px 5%;
+    padding: 24px 2%;
     gap: 20px;
     z-index: 99;
 }
