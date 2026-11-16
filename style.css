@@ -300,281 +300,401 @@ html {
         max-width:320px;
       }
     }
-/* Skills */
-.skills-section{
-    width:100%;
-    min-height:100vh;
+/* =========================
+   SKILLS SECTION
+========================= */
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+.skills-section {
+    width: 100%;
+    min-height: 140vh;
 
-    position:relative;
-    margin-top:60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    margin-top: 50px;
+
+    overflow: hidden;
 }
 
-/* CENTER */
 
-.center-circle{
-    width:250px;
-    height:250px;
+/* =========================
+   CENTER CIRCLE
+========================= */
 
-    border-radius:50%;
-    border:2px solid var(--indigo);
+.center-circle {
+    width: 250px;
+    height: 250px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    border-radius: 50%;
 
-    position:absolute;
+    border: 2px solid var(--indigo);
 
-    background:rgba(255,255,255,0.03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    z-index:10;
+    position: absolute;
 
-    box-shadow:0 0 40px rgba(34,139,205,0.4);
+    background: rgba(255, 255, 255, 0.03);
+
+    z-index: 10;
+
+    box-shadow: 0 0 40px rgba(34, 139, 205, 0.4);
 }
-.orbit1 .skill {
-    animation-duration: 15s;
+
+.center-circle h1 {
+    color: white;
+    font-size: 3rem;
+    text-align: center;
 }
+
+
+/* =========================
+   ORBITS
+========================= */
+
+.orbit {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    border-radius: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+
+/* INNER */
+
+.orbit1 {
+    width: 430px;
+    height: 430px;
+
+    border: 2px solid rgba(34, 139, 205, 0.8);
+
+    animation: orbitRotate 18s linear infinite;
+}
+
+
+/* OUTER */
+
+.orbit2 {
+    width: 650px;
+    height: 650px;
+
+    border: 2px dashed rgba(0, 210, 255, 0.8);
+
+    animation: orbitRotateReverse 24s linear infinite;
+}
+
+
+/* =========================
+   SKILL CIRCLES
+========================= */
+
+.skill {
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 2px solid var(--border);
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+
+    color: white;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 20px rgba(34, 139, 205, 0.4);
+
+    pointer-events: auto;
+
+    animation: skillCounterRotate 18s linear infinite;
+}
+
+.skill img {
+    width: 40px;
+}
+
+.skill p {
+    font-size: 0.75rem;
+
+    text-align: center;
+
+    margin: 0;
+}
+
+
+/* =========================
+   INNER ORBIT POSITIONS
+========================= */
+
+.orbit1 .skill:nth-child(1) {
+    top: -50px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.orbit1 .skill:nth-child(2) {
+    top: 18%;
+    right: -50px;
+}
+
+.orbit1 .skill:nth-child(3) {
+    bottom: 0;
+    right: 8%;
+}
+
+.orbit1 .skill:nth-child(4) {
+    bottom: 0;
+    left: 8%;
+}
+
+.orbit1 .skill:nth-child(5) {
+    top: 18%;
+    left: -50px;
+}
+
+
+/* =========================
+   OUTER ORBIT POSITIONS
+========================= */
+
+.orbit2 .skill:nth-child(1) {
+    top: -50px;
+    left: 50%;
+
+    transform: translateX(-50%);
+}
+
+.orbit2 .skill:nth-child(2) {
+    top: 18%;
+    right: -50px;
+}
+
+.orbit2 .skill:nth-child(3) {
+    bottom: 0;
+    right: 8%;
+}
+
+.orbit2 .skill:nth-child(4) {
+    bottom: 0;
+    left: 8%;
+}
+
+.orbit2 .skill:nth-child(5) {
+    top: 18%;
+    left: -50px;
+}
+
+
+/* =========================
+   ORBIT ANIMATION
+========================= */
+
+@keyframes orbitRotate {
+
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+}
+
+
+@keyframes orbitRotateReverse {
+
+    from {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+}
+
+
+@keyframes skillCounterRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+    .skills-section {
+        min-height: 400px;
+        margin-top: 0px;
+    }
+
+    .center-circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    .center-circle h1 {
+        font-size: 2.1rem;
+    }
+
+    .orbit1 {
+        width: 320px;
+        height: 320px;
+    }
+
+    .orbit2 {
+        width: 480px;
+        height: 480px;
+    }
+
+    .skill {
+        width: 75px;
+        height: 75px;
+    }
+
+    .skill img {
+        width: 28px;
+    }
+
+    .skill p {
+        font-size: 0.58rem;
+    }
+
+    .orbit1 .skill:nth-child(1),
+    .orbit2 .skill:nth-child(1) {
+        top: -38px;
+    }
+
+    .orbit1 .skill:nth-child(2),
+    .orbit2 .skill:nth-child(2) {
+        right: -38px;
+    }
+
+    .orbit1 .skill:nth-child(5),
+    .orbit2 .skill:nth-child(5) {
+        left: -38px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    .skills-section {
+        min-height: 400px;
+        margin-top: 0px;
+    }
+
+    .center-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    .center-circle h1 {
+        font-size: 1.25rem;
+    }
+
+    .orbit1 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .orbit2 {
+        width: 320px;
+        height: 320px;
+    }
+
+    .skill {
+        width: 58px;
+        height: 58px;
+
+        gap: 3px;
+    }
+
+    .skill img {
+        width: 20px;
+    }
+
+    .skill p {
+        font-size: 0.42rem;
+    }
+
+    .orbit1 .skill:nth-child(1),
+    .orbit2 .skill:nth-child(1) {
+        top: -29px;
+    }
+
+    .orbit1 .skill:nth-child(2),
+    .orbit2 .skill:nth-child(2) {
+        right: -29px;
+    }
+
+    .orbit1 .skill:nth-child(5),
+    .orbit2 .skill:nth-child(5) {
+        left: -25px;
+    }
+
+}
+/* =========================
+   KEEP OUTER ORBIT SKILLS UPRIGHT
+========================= */
 
 .orbit2 .skill {
-    animation-duration: 25s;
-}
-
-.center-circle h1{
-    color:white;
-    font-size:3rem;
-    text-align:center;
-}
-
-/* ORBITS */
-
-.orbit{
-    position:absolute;
-    border-radius:50%;
-
-    animation: rotateOrbit linear infinite;
-}
-
-.orbit1{
-    width:500px;
-    height:500px;
-
-    border:2px solid var(--indigo);
-
-    animation-duration:15s;
-}
-
-.orbit2{
-    width:700px;
-    height:700px;
-
-    border:2px dashed var(--cyan);
-
-    animation-duration:25s;
-}
-
-/* SKILLS */
-
-.skill{
-    width:110px;
-    height:110px;
-
-    border-radius:50%;
-
-    position:absolute;
-
-    background:rgba(255,255,255,0.05);
-
-    border:2px solid var(--border);
-
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-
-    gap:10px;
-
-    color:white;
-
-    backdrop-filter:blur(10px);
-
-    box-shadow:0 0 20px rgba(34,139,205,0.4);
-    animation: rotateOrbit linear infinite;
-    animation-direction: reverse;
-}
-
-.skill img{
-    width:40px;
-}
-
-.skill p{
-    font-size:.8rem;
-}
-
-/* ORBIT 1 POSITIONS */
-
-.html{
-    top:-50px;
-    left:50%;
-    transform:translateX(-10%);
-}
-
-.css{
-    top:50%;
-    right:-50px;
-    transform:translateY(-50%);
-}
-
-.js{
-    bottom:-50px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.react{
-    top:50%;
-    left:-50px;
-    transform:translateY(-50%);
-}
-
-/* ORBIT 2 POSITIONS */
-
-.git{
-    top:-50px;
-    left:50%;
-    transform:translateX(-10%);
-}
-
-.github{
-    top:50%;
-    right:-50px;
-    transform:translateY(-50%);
-}
-
-.figma{
-    bottom:-50px;
-    left:50%;
-    transform:translateX(-50%);
-}
-
-.vercel{
-    top:50%;
-    left:-50px;
-    transform:translateY(-50%);
-}
-
-/* ANIMATION */
-
-@keyframes rotateOrbit{
-
-    from{
-        transform:rotate(0deg);
-    }
-
-    to{
-        transform:rotate(360deg);
-    }
-
-}
-
-/* RESPONSIVE */
-
-@media(max-width:768px){
-
-    .orbit1{
-        width:350px;
-        height:350px;
-    }
-
-    .orbit2{
-        width:500px;
-        height:500px;
-    }
-
-    .skill{
-        width:80px;
-        height:80px;
-    }
-
-    .skill img{
-        width:28px;
-    }
-
-    .center-circle{
-        width:170px;
-        height:170px;
-    }
-
-    .center-circle h1{
-        font-size:2rem;
-    }
-}
-
-@media(max-width:500px){
-
-    .skills-section{
-        min-height:35vh;
-        padding:10px 0;
-    
-    }
-
-    .orbit1{
-        width:250px;
-        height:250px;
-    }
-
-    .orbit2{
-        width:350px;
-        height:350px;
-    }
-
-    .skill{
-        width:55px;
-        height:55px;
-        gap:4px;
-    }
-
-    .skill img{
-        width:18px;
-    }
-
-    .skill p{
-        font-size:.45rem;
-    }
-
-    .center-circle{
-        width:120px;
-        height:120px;
-    }
-
-    .center-circle h1{
-        font-size:1.2rem;
-    }
-
-    .html,
-    .git{
-        top:-25px;
-    }
-
-    .css,
-    .github{
-        right:-25px;
-    }
-
-    .react,
-    .vercel{
-        left:-25px;
-    }
-
-    .js,
-    .figma{
-        bottom:-25px;
-    }
+    animation: outerSkillCounterRotate 24s linear infinite;
 }
 
 
+/* Outer orbit moves counter-clockwise,
+   so the skills rotate clockwise
+   to stay upright */
+
+@keyframes outerSkillCounterRotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
 .projects-section {
     width: 100%;
     padding: 80px 8%;
@@ -882,4 +1002,365 @@ html {
     color: var(--bg);
     font-weight: 500;
     font-size: 1.1rem;
+}  
+
+
+/* =====================================================
+   EXTRA RESPONSIVE FIXES (paste at the END of style.css)
+===================================================== */
+
+/* ── GLOBAL SAFETY ── */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+section {
+    scroll-margin-top: 68px; /* so the fixed navbar doesn't cover section titles */
+}
+
+.hero {
+    min-height: 100dvh; /* fixes the mobile browser address-bar jump */
+}
+
+/* ── LARGE SCREENS (1400px and up) ── */
+@media (min-width: 1400px) {
+    .hero,
+    .projects-section,
+    .Contact {
+        max-width: 1300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ── SHORT LAPTOP SCREENS: give the orbits enough room ── */
+@media (min-width: 769px) and (max-height: 750px) {
+    .skills-section {
+        min-height: 850px;
+    }
+}
+
+/* ── TABLET / SMALL LAPTOP (769px – 992px) ── */
+@media (min-width: 769px) and (max-width: 992px) {
+    .nav-links a {
+        font-size: 16px;
+    }
+
+    .nav-cta {
+        font-size: 15px;
+        padding: 6px 16px;
+    }
+}
+
+/* ── TABLET & BELOW (992px) ── */
+@media (max-width: 992px) {
+    .hero {
+        padding: 100px 6% 60px;
+        gap: 30px;
+    }
+
+    .hero-text h4 {
+        margin-top: 0;
+    }
+
+    .hero-image img {
+        margin-left: 0; /* keeps the image centered in column layout */
+    }
+
+    .project-image {
+        flex: none;
+        width: 100%;
+    }
+
+    .project-info {
+        flex: none;
+        width: 100%;
+    }
+}
+
+/* ── MOBILE MENU: full width + scrollable ── */
+.mobile-menu {
+    right: 0;
+    width: 100%;
+    max-height: calc(100vh - 68px);
+    overflow-y: auto;
+}
+
+/* ── MOBILE (768px and below) ── */
+@media (max-width: 768px) {
+    nav {
+        padding: 0 5%;
+    }
+
+    .hero {
+        padding: 90px 5% 50px;
+    }
+
+    .hero-buttons {
+        width: 100%;
+    }
+
+    .project-links {
+        justify-content: flex-start;
+    }
+
+    .Contact {
+        padding: 50px 6%;
+    }
+
+    .Contact h2 {
+        margin-bottom: 40px;
+    }
+
+    .contact-container {
+        gap: 30px;
+    }
+
+    .contact-box {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .contact-box a {
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        font-size: 1.1rem;
+    }
+}
+
+/* ── LARGE PHONES (501px – 600px): orbit fits the screen ── */
+@media (min-width: 501px) and (max-width: 600px) {
+    .center-circle {
+        width: 150px;
+        height: 150px;
+    }
+
+    .center-circle h1 {
+        font-size: 1.7rem;
+    }
+
+    .orbit1 {
+        width: 280px;
+        height: 280px;
+    }
+
+    .orbit2 {
+        width: 420px;
+        height: 420px;
+    }
+
+    .skill {
+        width: 66px;
+        height: 66px;
+    }
+
+    .skill img {
+        width: 24px;
+    }
+
+    .skill p {
+        font-size: 0.5rem;
+    }
+
+    .orbit1 .skill:nth-child(1),
+    .orbit2 .skill:nth-child(1) {
+        top: -33px;
+    }
+
+    .orbit1 .skill:nth-child(2),
+    .orbit2 .skill:nth-child(2) {
+        right: -33px;
+    }
+
+    .orbit1 .skill:nth-child(5),
+    .orbit2 .skill:nth-child(5) {
+        left: -33px;
+    }
+}
+
+/* ── PHONES (576px and below) ── */
+@media (max-width: 576px) {
+    .hero-text h4 {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+
+    .hero-image img {
+        max-width: 260px;
+    }
+
+    .projects-section {
+        padding: 50px 5%;
+    }
+
+    .project-card {
+        padding: 18px;
+        gap: 24px;
+    }
+
+    .project-image img {
+        height: 190px;
+    }
+
+    .project-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .project-info p {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+
+    .btn-ghost,
+    .btn-filled {
+        font-size: 0.85rem;
+        padding: 9px 18px;
+    }
+
+    .Contact h2 {
+        font-size: 1.8rem;
+    }
+
+    .projects-title {
+        font-size: 1.7rem;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        padding: 20px 10px;
+    }
+
+    .footer span {
+        font-size: 1rem;
+    }
+}
+
+/* ── SMALL PHONES (360px and below) ── */
+@media (max-width: 360px) {
+    .skills-section {
+        min-height: 360px;
+    }
+
+    .center-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .center-circle h1 {
+        font-size: 1rem;
+    }
+
+    .orbit1 {
+        width: 190px;
+        height: 190px;
+    }
+
+    .orbit2 {
+        width: 270px;
+        height: 270px;
+    }
+
+    .skill {
+        width: 52px;
+        height: 52px;
+    }
+
+    .skill img {
+        width: 17px;
+    }
+
+    .skill p {
+        font-size: 0.36rem;
+    }
+
+    .orbit1 .skill:nth-child(1),
+    .orbit2 .skill:nth-child(1) {
+        top: -26px;
+    }
+
+    .orbit1 .skill:nth-child(2),
+    .orbit2 .skill:nth-child(2) {
+        right: -26px;
+    }
+
+    .orbit1 .skill:nth-child(5),
+    .orbit2 .skill:nth-child(5) {
+        left: -26px;
+    }
+
+    .hero-text h1 {
+        font-size: 1.7rem;
+    }
+
+    .nav-name {
+        font-size: 15px;
+    }
+}
+
+/* ── LANDSCAPE PHONES ── */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding-top: 90px;
+    }
+
+    .skills-section {
+        min-height: 700px;
+    }
+}
+
+/* ── TOUCH DEVICES: no hover lift on cards ── */
+@media (hover: none) {
+    .project-card:hover {
+        transform: none;
+    }
+}
+
+/* ── RESPECT "REDUCE MOTION" SETTING ── */
+@media (prefers-reduced-motion: reduce) {
+    .orbit,
+    .skill,
+    .hero-image img {
+        animation: none !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}    
+
+
+/* ── TABLETS / TALL SCREENS (iPad portrait etc.) ── */
+@media (min-width: 769px) and (orientation: portrait) {
+    .hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .skills-section {
+        min-height: 800px; /* orbit is 650px + skill circles overhang */
+        margin-top: 0;
+    }
+}
+
+/* ── iPad landscape and other short wide screens ── */
+@media (min-width: 993px) and (max-width: 1400px) and (orientation: landscape) {
+    .skills-section {
+        min-height: 850px;
+    }
 }
